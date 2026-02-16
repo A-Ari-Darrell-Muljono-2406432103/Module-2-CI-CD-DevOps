@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Module-01-Coding-Standards.iml" filepath="$PROJECT_DIR$/.idea/Module-01-Coding-Standards.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eshop.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eshop.main.iml" />
     </modules>
   </component>
 </project>
