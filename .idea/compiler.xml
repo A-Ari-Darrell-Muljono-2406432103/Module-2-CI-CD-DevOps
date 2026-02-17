@@ -11,12 +11,9 @@
         <module name="eshop.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="21" />
   </component>
   <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="eshop" options="-parameters" />
-      <module name="eshop.main" options="-parameters" />
-      <module name="eshop.test" options="-parameters" />
-    </option>
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
   </component>
 </project>
