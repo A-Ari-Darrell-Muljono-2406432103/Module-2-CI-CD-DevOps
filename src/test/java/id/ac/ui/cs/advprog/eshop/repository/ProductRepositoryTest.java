@@ -8,6 +8,7 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Iterator;
+import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,7 +24,6 @@ class ProductRepositoryTest {
     @Test
     void testCreateAndFind() {
         Product product = new Product();
-        product.setProductId("eb558e9f-1c39-460e-8860-71af6af63bd6");
         product.setProductName("Sampo Cap Bambang");
         product.setProductQuantity(100);
         productRepository.create(product);
@@ -34,6 +34,19 @@ class ProductRepositoryTest {
         assertEquals(product.getProductId(), savedProduct.getProductId());
         assertEquals(product.getProductName(), savedProduct.getProductName());
         assertEquals(product.getProductQuantity(), savedProduct.getProductQuantity());
+    }
+
+    @Test
+    void testFindById() {
+        Product product1 = new Product();
+        product1.setProductId("eb558e9f-1c39-460e-8860-71af6af63bd6");
+        product1.setProductName("Sampo Cap Bambang");
+        product1.setProductQuantity(100);
+        productRepository.create(product1);
+
+        Product savedProduct = productRepository.findById("eb558e9f-1c39-460e-8860-71af6af63bd6");
+        assertEquals(product1.getProductId(), savedProduct.getProductId());
+        assertNull(productRepository.findById("a0f9de46-90b1-437d-a0bf-d0821dde9096"));
     }
 
     @Test
@@ -73,6 +86,8 @@ class ProductRepositoryTest {
         product1.setProductQuantity(100);
         productRepository.create(product1);
 
+        Product product2 = new Product();
+
         product1.setProductName("Sampo Cap Bango");
         product1.setProductQuantity(5);
         productRepository.edit(product1);
@@ -82,6 +97,7 @@ class ProductRepositoryTest {
         Product savedProduct = productIterator.next();
         assertEquals(product1.getProductName(), savedProduct.getProductName());
         assertEquals(product1.getProductQuantity(), savedProduct.getProductQuantity());
+        assertNull(productRepository.edit(product2));
     }
 
     @Test
