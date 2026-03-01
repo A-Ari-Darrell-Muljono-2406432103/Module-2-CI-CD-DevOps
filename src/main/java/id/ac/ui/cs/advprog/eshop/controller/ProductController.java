@@ -77,7 +77,7 @@ class CarController extends ProductController {
     @PostMapping("/createCar")
     public String createCarPost(@ModelAttribute Car car, Model model) {
         carService.create(car);
-        return "redirect:ListCar";
+        return "redirect:listCar";
     }
 
     @GetMapping("/listCar")
@@ -98,12 +98,12 @@ class CarController extends ProductController {
     public String editCarPost(@ModelAttribute Car car, Model model) {
         System.out.println(car.getCarId());
         carService.update(car.getCarId(), car);
-        return "redirect:ListCar";
+        return "redirect:listCar";
     }
 
     @PostMapping("/deletecar")
     public String deteleCar(@RequestParam("carId") String carId) {
         carService.deleteCarById(carId);
-        return "redirect:ListCar";
+        return "redirect:listCar";
     }
 }
