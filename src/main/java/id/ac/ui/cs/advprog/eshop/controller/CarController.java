@@ -50,7 +50,7 @@ public class CarController {
     }
 
     @PostMapping("/deletecar")
-    public String deteleCar(@RequestParam("carId") String carId) {
+    public String deleteCar(@RequestParam("carId") String carId) {
         carService.deleteCarById(carId);
         return "redirect:listCar";
     }
