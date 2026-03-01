@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.eshop.EshopApplicationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-02-17T12:19:33.883Z" hostname="KOMP1" time="1.854">
+  <properties/>
+  <testcase name="testMain()" classname="id.ac.ui.cs.advprog.eshop.EshopApplicationTests" time="1.849"/>
+  <testcase name="contextLoads()" classname="id.ac.ui.cs.advprog.eshop.EshopApplicationTests" time="0.003"/>
+  <system-out><![CDATA[19:19:31.224 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.eshop.EshopApplicationTests]: EshopApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:19:31.449 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration id.ac.ui.cs.advprog.eshop.EshopApplication for test class id.ac.ui.cs.advprog.eshop.EshopApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.10)
+
+2026-02-17T19:19:32.142+07:00  INFO 26024 --- [eshop] [    Test worker] i.a.u.c.a.eshop.EshopApplicationTests    : Starting EshopApplicationTests using Java 21.0.10 with PID 26024 (started by oakwo in C:\Users\oakwo\OneDrive\Desktop\Kuliah\Adpro\Modul Adpro)
+2026-02-17T19:19:32.143+07:00  INFO 26024 --- [eshop] [    Test worker] i.a.u.c.a.eshop.EshopApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-02-17T19:19:33.853+07:00  INFO 26024 --- [eshop] [    Test worker] i.a.u.c.a.eshop.EshopApplicationTests    : Started EshopApplicationTests in 2.128 seconds (process running for 4.487)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.10)
+
+2026-02-17T19:19:34.856+07:00  INFO 26024 --- [eshop] [    Test worker] i.a.u.cs.advprog.eshop.EshopApplication  : Starting EshopApplication using Java 21.0.10 with PID 26024 (started by oakwo in C:\Users\oakwo\OneDrive\Desktop\Kuliah\Adpro\Modul Adpro)
+2026-02-17T19:19:34.856+07:00  INFO 26024 --- [eshop] [    Test worker] i.a.u.cs.advprog.eshop.EshopApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-02-17T19:19:35.386+07:00  INFO 26024 --- [eshop] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-17T19:19:35.415+07:00  INFO 26024 --- [eshop] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-17T19:19:35.416+07:00  INFO 26024 --- [eshop] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-17T19:19:35.533+07:00  INFO 26024 --- [eshop] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-17T19:19:35.536+07:00  INFO 26024 --- [eshop] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 674 ms
+2026-02-17T19:19:35.710+07:00  INFO 26024 --- [eshop] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-02-17T19:19:35.713+07:00  INFO 26024 --- [eshop] [    Test worker] i.a.u.cs.advprog.eshop.EshopApplication  : Started EshopApplication in 0.887 seconds (process running for 6.347)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\oakwo\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.17.8\f09415827a71be7ed621c7bd02550678f28bc81c\byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.bonigarcia:selenium-jupiter:5.0.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.github.bonigarcia" artifactId="selenium-jupiter" version="5.0.1" baseVersion="5.0.1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.bonigarcia/selenium-jupiter/5.0.1/e8d6f4619aa52e8b9d7b2c14b29241968eb1927f/selenium-jupiter-5.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-02-17T12:19:38.323Z" hostname="KOMP1" time="0.095">
+  <properties/>
+  <testcase name="testCreateAndFind()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.075"/>
+  <testcase name="testFindById()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.003"/>
+  <testcase name="testFindAllIfEmpty()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.004"/>
+  <testcase name="testEditProduct()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.003"/>
+  <testcase name="testFindAllIfMoreThanOneProduct()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.003"/>
+  <testcase name="testDeleteProduct()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
