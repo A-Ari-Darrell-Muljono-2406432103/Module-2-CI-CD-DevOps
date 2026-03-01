@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eshop.iml" filepath="$PROJECT_DIR$/.idea/modules/eshop.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eshop.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eshop.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eshop.test.iml" filepath="$PROJECT_DIR$/.idea/modules/eshop.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eshop_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eshop_main.iml" group="eshop" />
     </modules>
   </component>
 </project>
