@@ -19,3 +19,11 @@ Strategi saya dalam memperbaikinya dimulai dengan mengidentifikasi letak kode ya
 
 ## Refleksi 2
 Menurut saya, implementasi workflow saat ini sudah sangat memenuhi definisi dari Continuous Integration (CI) dan Continuous Deployment (CD). Untuk aspek CI, pipeline sudah diatur agar secara otomatis melakukan build, menjalankan test suite, memeriksa code coverage, dan mengeksekusi static code analysis setiap kali ada push ke repositori, sehingga integrasi kode baru selalu terverifikasi kualitasnya. Sementara untuk aspek CD, saya menggunakan heroku (PaaS) dan menggunak automatic deployment yang dimana ketika saya push ke main maka code akan secara otomatis terupdate.
+
+# Module-03-Maintainability-&-OO-Principles
+
+## Refleksi 1
+Yang aku terapkan dalam project ini adalah SRP, LSP, dan juga DIP. Ketiga SOLID principles tersebut yang belum terpenuhi dalam code saya. 
+SRP disini saya implement dikarenakan pada code sebelumnya ProductController dan juga CarController digabung. Untuk memenuhi SRP, saya memisah kedua class tersebut. Hal ini membantu agar code lebih maintainability karena 1 class hanya memiliki 1 job. ProductController mengurus semua mapping yang berhubungan dengan product, CarController mengurus semua mapping yang berhubungan dengan Car. Jika tidak dipenuhi, jika sudah ada banyak controller, maka akan sangat susah untuk mencari Controller mana yang mengatur mapping mana. Line of codenya terlalu banyak.
+LSP disini saya implement pada code yang sama yaitu ProductController dan juga CarController. Code sebelumnya adalah CarCOntroller meng extends/inherit dari ProductController. Ini tidak perlu karena mapping yang dibutuhkan oleh Car, tidak berasal dari Prodsuct. Jadi setelah memisahkannya dengan file yang berbeda, saya juga menghapus inheritance CarController.
+DIP disini saya implement dikarenakan pada code sebelumnya, CarService menginisiasi Autowired CarService dengan CarServiceImpl. Disini melanggar DIP yang dimana modul tingkat tinggi bergantung dengan modul tingkat rendah. Disini untuk mengimplementasi DIP mudah, hanya inisiasi tetapi berbeda class yaitu langsung ke carService.
