@@ -1,5 +1,6 @@
 package id.ac.ui.cs.advprog.eshop.model;
 
+import enums.PaymentMethod;
 import lombok.Getter;
 
 import java.util.Map;
@@ -15,26 +16,43 @@ public class Payment {
     public Payment(String id, Order order, String method, Map<String, String> paymentData) {
         this.id = id;
         this.order = order;
-        this.method = method;
-        this.paymentData = paymentData;
 
-        if ("VOUCHER_CODE".equals(method)) {
-            String voucher = paymentData.get("voucherCode");
-            if (voucher != null && voucher.length() == 16 && voucher.startsWith("ESHOP") && voucher.replaceAll("[^0-9]", "").length() == 8) {
-                this.status = "SUCCESS";
-            } else {
-                this.status = "REJECTED";
-            }
-        } else if ("CASH_ON_DELIVERY".equals(method)) {
-            String address = paymentData.get("address");
-            String deliveryFee = paymentData.get("deliveryFee");
-            if (address == null || address.trim().isEmpty() || deliveryFee == null || deliveryFee.trim().isEmpty()) {
-                this.status = "REJECTED";
-            } else {
-                this.status = "SUCCESS";
-            }
+        if (PaymentMethod.contains(method)) {
+            this.method = method;
         } else {
-            this.status = "REJECTED";
+            throw new IllegalArgumentException("Metode pembayaran tidak dikenali");
         }
+
+        this.paymentData = paymentData;
+        this.status = determineStatus(this.method, this.paymentData);
+    }
+
+    private String determineStatus(String method, Map<String, String> paymentData) {
+        if (PaymentMethod.VOUCHER_CODE.getValue().equals(method)) {
+            return validateVoucherCode(paymentData.get("voucherCode")) ? "SUCCESS" : "REJECTED";
+        } else if (PaymentMethod.CASH_ON_DELIVERY.getValue().equals(method)) {
+            return validateCashOnDelivery(paymentData.get("address"), paymentData.get("deliveryFee")) ? "SUCCESS" : "REJECTED";
+        }
+        return "REJECTED";
+    }
+
+    private boolean validateVoucherCode(String voucher) {
+        if (voucher == null || voucher.length() != 16 || !voucher.startsWith("ESHOP")) {
+            return false;
+        }
+        int numCount = 0;
+        for (char c : voucher.toCharArray()) {
+            if (Character.isDigit(c)) numCount++;
+        }
+        return numCount == 8;
+    }
+
+    private boolean validateCashOnDelivery(String address, String deliveryFee) {
+        return address != null && !address.trim().isEmpty() &&
+            deliveryFee != null && !deliveryFee.trim().isEmpty();
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

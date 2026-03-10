@@ -58,4 +58,13 @@ class PaymentTest {
         Payment payment = new Payment("payment-2", order, "CASH_ON_DELIVERY", paymentData);
         assertEquals("REJECTED", payment.getStatus());
     }
+
+    @Test
+    void testCreatePaymentInvalidMethodThrowsException() {
+        Map<String, String> paymentData = new HashMap<>();
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Payment("payment-error", order, "METODE_NGASAL", paymentData);
+        });
+    }
 }
