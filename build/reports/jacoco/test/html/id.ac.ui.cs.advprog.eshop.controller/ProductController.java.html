@@ -11,51 +11,51 @@ import java.util.List;
 
 @Controller
 @RequestMapping(&quot;/product&quot;)
-<span class="fc" id="L14">public class ProductController {</span>
+<span class="nc" id="L14">public class ProductController {</span>
 
     @Autowired
     private ProductService service;
 
     @GetMapping(&quot;/create&quot;)
     public String createProductPage(Model model) {
-<span class="fc" id="L21">        Product product = new Product();</span>
-<span class="fc" id="L22">        model.addAttribute(&quot;product&quot;, product);</span>
-<span class="fc" id="L23">        return &quot;CreateProduct&quot;;</span>
+<span class="nc" id="L21">        Product product = new Product();</span>
+<span class="nc" id="L22">        model.addAttribute(&quot;product&quot;, product);</span>
+<span class="nc" id="L23">        return &quot;CreateProduct&quot;;</span>
     }
 
     @PostMapping(&quot;/create&quot;)
     public String createProductPost(@ModelAttribute Product product, Model model) {
-<span class="fc" id="L28">        service.create(product);</span>
-<span class="fc" id="L29">        return &quot;redirect:list&quot;;</span>
+<span class="nc" id="L28">        service.create(product);</span>
+<span class="nc" id="L29">        return &quot;redirect:list&quot;;</span>
     }
 
     @GetMapping(&quot;/edit/{id}&quot;)
     public String editProductPage(@PathVariable String id, Model model) {
-<span class="fc" id="L34">        Product existingProduct = service.findById(id);</span>
-<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (existingProduct == null) {</span>
-<span class="fc" id="L36">            return &quot;redirect:../list&quot;;</span>
+<span class="nc" id="L34">        Product existingProduct = service.findById(id);</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (existingProduct == null) {</span>
+<span class="nc" id="L36">            return &quot;redirect:../list&quot;;</span>
         }
-<span class="fc" id="L38">        model.addAttribute(&quot;product&quot;, existingProduct);</span>
-<span class="fc" id="L39">        return &quot;EditProduct&quot;;</span>
+<span class="nc" id="L38">        model.addAttribute(&quot;product&quot;, existingProduct);</span>
+<span class="nc" id="L39">        return &quot;EditProduct&quot;;</span>
     }
 
     @PostMapping(&quot;/edit&quot;)
     public String editProductPost(@ModelAttribute Product product) {
-<span class="fc" id="L44">        service.edit(product);</span>
-<span class="fc" id="L45">        return &quot;redirect:list&quot;;</span>
+<span class="nc" id="L44">        service.edit(product);</span>
+<span class="nc" id="L45">        return &quot;redirect:list&quot;;</span>
     }
 
     @GetMapping(&quot;/list&quot;)
     public String productListPage(Model model) {
-<span class="fc" id="L50">        List&lt;Product&gt; allProducts = service.findAll();</span>
-<span class="fc" id="L51">        model.addAttribute(&quot;products&quot;, allProducts);</span>
-<span class="fc" id="L52">        return &quot;ProductList&quot;;</span>
+<span class="nc" id="L50">        List&lt;Product&gt; allProducts = service.findAll();</span>
+<span class="nc" id="L51">        model.addAttribute(&quot;products&quot;, allProducts);</span>
+<span class="nc" id="L52">        return &quot;ProductList&quot;;</span>
     }
 
     @GetMapping(&quot;/delete/{id}&quot;)
     public String deleteProduct(@PathVariable String id) {
-<span class="fc" id="L57">        service.delete(id);</span>
-<span class="fc" id="L58">        return &quot;redirect:../list&quot;;</span>
+<span class="nc" id="L57">        service.delete(id);</span>
+<span class="nc" id="L58">        return &quot;redirect:../list&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>
