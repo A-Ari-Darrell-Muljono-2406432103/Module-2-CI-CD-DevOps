@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0b43ce4-7186-4a38-b6ff-8b15d3fcb317" name="Changes" comment="" />
+    <list default="true" id="e0b43ce4-7186-4a38-b6ff-8b15d3fcb317" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/eshop/model/PaymentTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,7 +224,7 @@
       <workItem from="1772370581579" duration="260000" />
       <workItem from="1772761158165" duration="1165000" />
       <workItem from="1772797867912" duration="593000" />
-      <workItem from="1773141492692" duration="4077000" />
+      <workItem from="1773141492692" duration="4415000" />
     </task>
     <servers />
   </component>
