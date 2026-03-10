@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0b43ce4-7186-4a38-b6ff-8b15d3fcb317" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/id/ac/ui/cs/advprog/eshop/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/eshop/model/OrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/id/ac/ui/cs/advprog/eshop/model/OrderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/OrderStatus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +195,7 @@
       <workItem from="1772370581579" duration="260000" />
       <workItem from="1772761158165" duration="1165000" />
       <workItem from="1772797867912" duration="593000" />
-      <workItem from="1773141492692" duration="352000" />
+      <workItem from="1773141492692" duration="689000" />
     </task>
     <servers />
   </component>
